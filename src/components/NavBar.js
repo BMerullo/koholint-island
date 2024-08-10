@@ -17,7 +17,7 @@ const NavBar = () => {
         </Link>
         <Link
           className="btn-link mobilescreen"
-          to="https://koholint-wiki.netlify.app/koholint-island"
+          to="https://koholint-island.netlify.app/koholint-island"
         >
           <img src={palmTree} alt="logo" className="btn-logo" />
         </Link>

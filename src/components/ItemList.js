@@ -12,7 +12,7 @@ const ItemList = ({ items = [] }) => {
           const itemSlug = slugify(name, { lower: true })
           return (
             <Link
-              to={`https://koholint-wiki.netlify.app/${itemSlug}`}
+              to={`https://koholint-island.netlify.app/${itemSlug}`}
               key={id}
               className="item"
             >

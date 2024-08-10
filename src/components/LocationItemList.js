@@ -36,7 +36,7 @@ const LocationItemList = props => {
         return location.includes(props.name) ? (
           <div className="item-img-container">
             <Link
-              to={`https://koholint-wiki.netlify.app/${itemSlug}`}
+              to={`https://koholint-island.netlify.app/${itemSlug}`}
               key={item.id}
               className="item"
             >
