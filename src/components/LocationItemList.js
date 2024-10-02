@@ -29,7 +29,7 @@ const LocationItemList = props => {
   console.log(props)
   console.log(items)
   return (
-    <div className="catagory-location-page">
+    <div className="category-location-page">
       {items.map((item, index) => {
         const location = item.info.locations
         const itemSlug = slugify(item.name, { lower: true })
