@@ -420,7 +420,6 @@ footer {
   .categories-page {
     display: grid;
     grid-template-columns: 3fr;
-    background-color: #666;
   }
 }
 
