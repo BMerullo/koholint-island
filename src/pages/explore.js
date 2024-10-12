@@ -12,27 +12,26 @@ const explore = ({ data }) => {
   return (
     <Layout>
       <SEO title="Explore" />
-      <main className="page">
-        <header className="hero-category">
+      <main>
+        <header>
           <StaticImage
             src="../assets/images/landscape.jpeg"
             alt="koholint island"
-            className="hero-img"
             placeholder="blurred"
             layout="fullWidth"
           ></StaticImage>
-          <div className="hero-container">
-            <div className="hero-text">
+          <div>
+            <div>
               <h1>Explore</h1>
             </div>
           </div>
         </header>
-        <section className="category-location-page">
+        <section>
           {newLocations.map((location, index) => {
             const [text] = location
             const locationSlug = slugify(text, { lower: true })
             return (
-              <Link to={`/${locationSlug}`} key={index} className="location">
+              <Link to={`/${locationSlug}`} key={index}>
                 <h5>{text}</h5>
               </Link>
             )

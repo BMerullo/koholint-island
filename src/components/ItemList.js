@@ -5,29 +5,27 @@ import slugify from "slugify"
 
 const ItemList = ({ items = [] }) => {
   return (
-    <div className="item-container">
-      <div className="catagory-location-page">
-        {items.map((item, index) => {
-          const { id, name, image, slug } = item
-          const itemSlug = slugify(name, { lower: true })
-          return (
-            <Link
-              to={`https://koholint-island.netlify.app/${itemSlug}`}
-              key={id}
-              className="item"
-            >
-              <div className="item-img-container">
-                <GatsbyImage
-                  image={image.gatsbyImageData}
-                  alt={name}
-                  className="item-img"
-                />
-              </div>
-              <h5>{name}</h5>
-            </Link>
-          )
-        })}
-      </div>
+    <div>
+      {items.map((item, index) => {
+        const { id, name, image, slug } = item
+        const itemSlug = slugify(name, { lower: true })
+        return (
+          <Link
+            to={`https://koholint-island.netlify.app/${itemSlug}`}
+            key={id}
+            className="item"
+          >
+            <div>
+              <GatsbyImage
+                image={image.gatsbyImageData}
+                alt={name}
+                className="item-img"
+              />
+            </div>
+            <h5>{name}</h5>
+          </Link>
+        )
+      })}
     </div>
   )
 }

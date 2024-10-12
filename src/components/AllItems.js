@@ -30,7 +30,7 @@ const AllItems = () => {
   const items = data.allContentfulLinksAwakening.nodes
   return (
     <section>
-      <div className="main-item-container">
+      <div>
         <CategoryList items={items} />
         <MainPageItemList items={items} />
       </div>

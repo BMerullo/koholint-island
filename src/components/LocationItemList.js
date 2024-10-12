@@ -29,24 +29,22 @@ const LocationItemList = props => {
   console.log(props)
   console.log(items)
   return (
-    <div className="category-location-page">
+    <div>
       {items.map((item, index) => {
         const location = item.info.locations
         const itemSlug = slugify(item.name, { lower: true })
         return location.includes(props.name) ? (
-          <div className="item-img-container">
+          <div>
             <Link
               to={`https://koholint-island.netlify.app/${itemSlug}`}
               key={item.id}
-              className="item"
             >
-              <div className="item-img">
+              <div>
                 <GatsbyImage
                   image={item.image.gatsbyImageData}
                   alt={item.name}
-                  className="item-img"
                 />
-                <h5 className="location-link-title">{item.name}</h5>
+                <h5>{item.name}</h5>
               </div>
             </Link>
           </div>

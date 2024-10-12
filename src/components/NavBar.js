@@ -4,36 +4,30 @@ import palmTree from "../assets/images/logos/island.jpg"
 
 const NavBar = () => {
   return (
-    <nav>
-      <div className="nav-bar">
+    <nav className="flex">
+      <div>
         <Link to="/">
-          <div className="flex fullscreen">
-            <h2 className="link">Koholint Wiki</h2>
-            <img src={palmTree} alt="logo" className="logo nav-link" />
+          <div>
+            <h2 className="">Koholint Wiki</h2>
+
+            <img className="display-none" src={palmTree} alt="logo" />
           </div>
-          <div className="flex mobilescreen">
-            <h2 className="link">Koholint Wiki</h2>
-          </div>
+          {/* <div>
+            <h2>Koholint Wiki</h2>
+          </div> */}
         </Link>
-        <Link
-          className="btn-link mobilescreen"
-          to="https://koholint-island.netlify.app/koholint-island"
-        >
-          <img src={palmTree} alt="logo" className="btn-logo" />
-        </Link>
+        {/* <Link to="https://koholint-island.netlify.app/koholint-island">
+          <img src={palmTree} alt="logo" />
+        </Link> */}
       </div>
-      <div className="nav-links">
-        <Link to="/" className="nav-link" activeClassName="active-link">
+      <div className="sm:hidden">
+        <Link to="/" activeClassName="active-link">
           home
         </Link>
-        <Link
-          to="/categories"
-          className="nav-link"
-          activeClassName="active-link"
-        >
+        <Link to="/categories" activeClassName="active-link">
           categories
         </Link>
-        <Link to="/explore" className="nav-link" activeClassName="active-link">
+        <Link to="/explore" activeClassName="active-link">
           explore
         </Link>
       </div>

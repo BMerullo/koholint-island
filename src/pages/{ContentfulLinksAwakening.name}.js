@@ -20,31 +20,27 @@ const ItemTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={name} />
-      <main className="page">
-        <h3 className="singleItemTitle">{name}</h3>
-        <section className=" singleItemContainer">
-          <article className="image-description-container">
-            <div className="single-item-image-container">
+      <main>
+        <h3>{name}</h3>
+        <section>
+          <article>
+            <div>
               <GatsbyImage
                 image={pathToImage}
                 alt={name}
                 className="singleImage"
               />
             </div>
-            <p className="descriptionText">{description}</p>
+            <p>{description}</p>
           </article>
-          <div className="tag-flex">
+          <div>
             <h5>Location(s): </h5>
             {/* <div className="tag-container"> */}
-            <h5 className="tag-container">
+            <h5>
               {locations.map((location, index) => {
                 const locationSlug = slugify(location, { lower: true })
                 return (
-                  <Link
-                    to={`/${locationSlug}`}
-                    key={index}
-                    className="single-page-location-link"
-                  >
+                  <Link to={`/${locationSlug}`} key={index}>
                     {location}
                   </Link>
                 )
@@ -52,16 +48,12 @@ const ItemTemplate = ({ data }) => {
             </h5>
           </div>
           {/* </div> */}
-          <div className="tag-flex">
+          <div>
             <h5>Categorie(s): </h5>
-            <h5 className="tag-container">
+            <h5>
               {catagories.map((catagory, index) => {
                 return (
-                  <Link
-                    to={`/${catagory}`}
-                    key={index}
-                    className="single-page-category-link"
-                  >
+                  <Link to={`/${catagory}`} key={index}>
                     {catagory}
                   </Link>
                 )
@@ -69,12 +61,10 @@ const ItemTemplate = ({ data }) => {
             </h5>
           </div>
         </section>
-        {locationBoolean === true ? (
-          <h3 className="locationItemListTitle">Found in {name} . . .</h3>
-        ) : null}
-        <section className="locationItemList">
+        {locationBoolean === true ? <h3>Found in {name} . . .</h3> : null}
+        <section>
           {locationBoolean === true ? (
-            <div className="categories-page">
+            <div>
               <LocationItemList name={name} />
             </div>
           ) : null}

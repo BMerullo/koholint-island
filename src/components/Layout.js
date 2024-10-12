@@ -7,9 +7,11 @@ import "../assets/main.css"
 const Layout = ({ children }) => {
   return (
     <>
-      <NavBar />
-      {children}
-      <Footer />
+      <body className="mx-4 md:mx-[300px]">
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
     </>
   )
 }

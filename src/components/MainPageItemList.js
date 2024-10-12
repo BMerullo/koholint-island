@@ -5,8 +5,8 @@ import slugify from "slugify"
 
 const MainPageItemList = ({ items = [] }) => {
   return (
-    <div className="item-container">
-      <div className="categories-page">
+    <div>
+      <div>
         {items.map((item, index) => {
           const { id, name, image, slug } = item
           const itemSlug = slugify(name, { lower: true })
@@ -14,14 +14,9 @@ const MainPageItemList = ({ items = [] }) => {
             <Link
               to={`https://koholint-island.netlify.app/${itemSlug}`}
               key={id}
-              className="item"
             >
-              <div className="item-img-container">
-                <GatsbyImage
-                  image={image.gatsbyImageData}
-                  alt={name}
-                  className="item-img"
-                />
+              <div>
+                <GatsbyImage image={image.gatsbyImageData} alt={name} />
               </div>
               <h5>{name}</h5>
             </Link>

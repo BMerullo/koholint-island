@@ -8,15 +8,15 @@ import logo from "../assets/images/logos/logo.png"
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-content-container">
+      <div>
         <div>
           <Link to="https://bob-merullo.netlify.app/">
-            <img className="bob-logo" src={logo} alt="logo" />
+            <img src={logo} alt="logo" />
           </Link>
         </div>
-        <div className="footer-links">
+        <div>
           <div>
-            <ul className="footer-list">
+            <ul>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -29,40 +29,25 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <ul className="footer-list">
+            <ul>
               <div>
                 <li>
                   <a href="https://bob-merullo.netlify.app/">
-                    <img
-                      className="link-icon"
-                      src={logoImg}
-                      alt="linkedin logo"
-                    />{" "}
-                    portfolio
+                    <img src={logoImg} alt="linkedin logo" /> portfolio
                   </a>
                 </li>
               </div>
               <div>
                 <li>
                   <a href="https://www.linkedin.com/in/bobmerullo/">
-                    <img
-                      className="link-icon"
-                      src={linkedinImg}
-                      alt="linkedin logo"
-                    />{" "}
-                    linkedin
+                    <img src={linkedinImg} alt="linkedin logo" /> linkedin
                   </a>
                 </li>
               </div>
               <div>
                 <li>
                   <a href="https://github.com/BMerullo">
-                    <img
-                      className="link-icon"
-                      src={githubImg}
-                      alt="github logo"
-                    />{" "}
-                    github
+                    <img src={githubImg} alt="github logo" /> github
                   </a>
                 </li>
               </div>

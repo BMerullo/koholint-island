@@ -10,26 +10,25 @@ const categories = ({ data }) => {
   return (
     <Layout>
       <SEO title="Categories" />
-      <main className="page">
-        <header className="hero-category">
+      <main>
+        <header>
           <StaticImage
             src="../assets/images/sword.jpeg"
             alt="koholint island"
-            className="hero-img"
             placeholder="blurred"
             layout="fullWidth"
           ></StaticImage>
-          <div className="hero-container">
-            <div className="hero-text">
+          <div>
+            <div>
               <h1>Categories</h1>
             </div>
           </div>
         </header>
-        <section className="categories-page">
+        <section>
           {newCategories.map((category, index) => {
             const [text] = category
             return (
-              <Link to={`/${text}`} key={index} className="category">
+              <Link to={`/${text}`} key={index}>
                 <h5>{text}</h5>
               </Link>
             )
