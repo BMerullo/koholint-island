@@ -20,7 +20,7 @@ const NavBar = () => {
           <img src={palmTree} alt="logo" />
         </Link> */}
       </div>
-      <div className="">
+      <div className="flex justify-between">
         <Link to="/" activeClassName="active-link">
           home
         </Link>
