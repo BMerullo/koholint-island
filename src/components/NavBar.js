@@ -4,13 +4,13 @@ import palmTree from "../assets/images/logos/island.jpg"
 
 const NavBar = () => {
   return (
-    <nav className="flex">
+    <nav className="block">
       <div>
         <Link to="/">
-          <div>
+          <div className="flex items-center justify-between my-4">
             <h2 className="">Koholint Wiki</h2>
 
-            <img className="display-none" src={palmTree} alt="logo" />
+            <img className="display-block h-7" src={palmTree} alt="logo" />
           </div>
           {/* <div>
             <h2>Koholint Wiki</h2>
@@ -20,7 +20,7 @@ const NavBar = () => {
           <img src={palmTree} alt="logo" />
         </Link> */}
       </div>
-      <div className="sm:hidden">
+      <div className="">
         <Link to="/" activeClassName="active-link">
           home
         </Link>
