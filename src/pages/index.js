@@ -9,17 +9,18 @@ export default function Home() {
     <Layout>
       <SEO title="Home Page" />
       <main>
-        <hero>
+        <hero className="relative">
           <StaticImage
+            className="rounded-2xl h-[400px]"
             src="../assets/images/koholint-img.jpeg"
             alt="koholint island"
             placeholder="blurred"
             layout="fullWidth"
           ></StaticImage>
-          <div>
+          <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-white text-center rounded-2xl h-[400px]">
             <div>
-              <h3>The Legend of Zelda</h3>
-              <h2>Link's Awakening</h2>
+              <h3 className="size-md">The Legend of Zelda</h3>
+              <h2 className="text-4xl">Link's Awakening</h2>
             </div>
           </div>
         </hero>

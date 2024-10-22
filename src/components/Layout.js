@@ -6,13 +6,11 @@ import "../assets/main.css"
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <body className="mx-4 md:mx-[300px]">
-        <NavBar />
-        {children}
-        <Footer />
-      </body>
-    </>
+    <Layout className="">
+      <NavBar />
+      <body className="mx-4 lg:mx-[300px]">{children}</body>
+      <Footer />
+    </Layout>
   )
 }
 

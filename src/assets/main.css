@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Cinzel", sarif;
+}
+
+.active {
+  color: #32c417;
+}

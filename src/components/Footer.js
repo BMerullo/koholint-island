@@ -7,52 +7,66 @@ import logo from "../assets/images/logos/logo.png"
 
 const Footer = () => {
   return (
-    <footer>
-      <div>
-        <div>
-          <Link to="https://bob-merullo.netlify.app/">
-            <img src={logo} alt="logo" />
-          </Link>
+    <footer className="bg-grey px-4 lg:px-[300px] lg:flex justify-between items-top py-10">
+      <div className="pb-4 lg:pb-4">
+        <Link to="https://bob-merullo.netlify.app/">
+          <img src={logo} alt="logo" className="h-10 " />
+        </Link>
+      </div>
+      <div className="flex justify-between">
+        <div className="">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/explore">Explore</Link>
+            </li>
+            <li>
+              <Link to="/catagories">Categories</Link>
+            </li>
+          </ul>
         </div>
-        <div>
-          <div>
-            <ul>
+        <div className="lg:ml-20">
+          <ul>
+            <div>
               <li>
-                <Link to="/">Home</Link>
+                <a
+                  href="https://bob-merullo.netlify.app/"
+                  className="flex items-center"
+                >
+                  <img src={logoImg} alt="linkedin logo" className="h-4 pr-2" />{" "}
+                  portfolio
+                </a>
               </li>
+            </div>
+            <div>
               <li>
-                <Link to="/explore">Explore</Link>
+                <a
+                  href="https://www.linkedin.com/in/bobmerullo/"
+                  className="flex items-center"
+                >
+                  <img
+                    src={linkedinImg}
+                    alt="linkedin logo"
+                    className="h-4 pr-2"
+                  />{" "}
+                  linkedin
+                </a>
               </li>
+            </div>
+            <div className="flex">
               <li>
-                <Link to="/catagories">Categories</Link>
+                <a
+                  href="https://github.com/BMerullo"
+                  className="flex items-center"
+                >
+                  <img src={githubImg} alt="github logo" className="h-4 pr-2" />{" "}
+                  github
+                </a>
               </li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <div>
-                <li>
-                  <a href="https://bob-merullo.netlify.app/">
-                    <img src={logoImg} alt="linkedin logo" /> portfolio
-                  </a>
-                </li>
-              </div>
-              <div>
-                <li>
-                  <a href="https://www.linkedin.com/in/bobmerullo/">
-                    <img src={linkedinImg} alt="linkedin logo" /> linkedin
-                  </a>
-                </li>
-              </div>
-              <div>
-                <li>
-                  <a href="https://github.com/BMerullo">
-                    <img src={githubImg} alt="github logo" /> github
-                  </a>
-                </li>
-              </div>
-            </ul>
-          </div>
+            </div>
+          </ul>
         </div>
       </div>
     </footer>
